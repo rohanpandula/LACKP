@@ -1,0 +1,16 @@
+<h1><%= @name %></h1>
+
+<% @teams.each do |key, value| %>
+  <% if key == @name %>
+    <% value.each do |player| %>
+    <p>
+      <%= player[:first] %>
+      <%= player[:last] %>:
+      <%= player[:position] %>
+      </p>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
